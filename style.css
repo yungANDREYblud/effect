@@ -1,0 +1,308 @@
+.elem {
+    border: 1px solid red;
+    width: 250px;
+    height: 100px;
+}
+#elem1 {
+    background-color: white;
+    transition: all 1s ease-in;
+}
+
+#elem1:hover {
+    background-color: red;
+}
+#elem2 {
+    color: red;
+    transition: all 1s ease-in;
+}
+#elem2:hover {
+    color: white;
+    background-color: red;
+}
+#elem3 {
+    transition: all 1s ease-in;
+}
+
+#elem3:hover {
+    width: 600px;
+}
+#elem4 {
+    transition: all 1s ease-in;
+}
+#elem4:hover {
+    margin: 0 50px;
+    width: 500px;
+}
+#elem5 {
+    transition: all 1s ease-in 2s;
+}
+#elem5:hover {
+    width: 500px;
+}
+#elem6{
+    transition: width 3s cubic-bezier(.20, -0.4, 0, .81);
+}
+#elem6:hover {
+    width: 300px;
+}
+#a {
+    width: 100px;
+    height: 30px;
+    padding: 0 5px;
+    border: 1px solid black;
+    border-radius: 2px;
+    box-sizing: border-box;
+    transition: all 1s ease-out;
+}
+#a:focus {
+    width: 200px;
+    border: 1px solid blue;
+    color: blue;
+    outline: none;
+}
+#b{
+    width: 100px;
+    height: 30px;
+    padding: 0 5px;
+    border: 1px solid black;
+    border-radius: 2px;
+    box-sizing: border-box;
+    transition: all 1s ease-out;
+}
+#b:focus {
+    border: 1px solid blue;
+    box-shadow: 0 0 5px blue;
+    color: blue;
+    outline: none;
+}
+
+@keyframes elem9 {
+	from {
+		margin-left: 3px;
+		}
+	to {
+		margin-left: 500px;
+		}
+}
+			
+#elem9 {
+	width: 50px;
+	height: 50px;
+	border: 1px solid red;
+	animation: elem9 4s infinite;
+}
+
+@keyframes elem10 {
+	from {
+		background: white;
+		}
+	to {
+		background: red;
+		}
+}
+			
+#elem10 {
+	width: 200px;
+	height: 200px;
+	border: 1px solid red;
+	animation: elem10 4s infinite;
+}
+
+@keyframes elem11 {
+	0% {
+		left: 0;
+		top: 0;
+}
+	25% {
+		left: 300px;
+		top: 0;
+}
+	50% {
+		left: 300px;
+		top: 300px;
+}
+	75% {
+		left: 0;
+		top: 300px;
+}
+	100% {
+		left: 0%;
+		top: 0%;
+}
+}
+			
+#elem11 {
+	width: 50px;
+	height: 50px;
+	border: 1px solid red;
+	position: absolute;
+	animation: elem11 8s linear infinite;
+    margin: 1900px 0px ;
+}
+#b1 {
+    margin: 200px 0px ;
+}
+
+@keyframes elem12 {
+0% {
+	left: 0;
+	top: 0;
+    background: white;
+}
+25% {
+	left: 300px;
+	top: 0;
+}
+	50% {
+	left: 300px;
+	top: 300px;
+    background: red;
+}
+75% {
+	left: 0;
+	top: 300px;
+    
+}
+100% {
+	left: 0%;
+	top: 0%;
+    background: white;
+	}
+}
+
+@keyframes elem13 {
+0% {
+	background: white;
+}
+50% {
+	background: red;
+}
+100% {
+	background: white;
+}
+}
+			
+#elem12 {
+	width: 50px;
+	height: 50px;
+	border: 1px solid red;
+	position: absolute;
+	animation: elem12 8s linear infinite, elem13 2s linear infinite;
+    margin: 2350px 0px;
+}
+#b2 {
+    margin: 450px 0px;
+}
+
+@keyframes elem14 {
+	from {
+		margin-left: 0%;
+	}
+	to {
+		margin-left: 50%;
+	}
+}
+			
+#elem14 {
+	width: 50px;
+	height: 50px;
+	border: 1px solid red;
+	animation: elem14 8s infinite alternate;
+}
+
+@keyframes anim {
+	from {
+		width: 10%;
+	}
+	to {
+		width: 40%;
+	}
+}
+			
+#elem15 {
+	height: 50px;
+	border: 1px solid red;
+	animation: anim 2s ease infinite alternate;
+	animation-play-state: paused;
+}
+#elem15:hover {
+	animation-play-state: running;
+}
+
+@keyframes elem16 {
+	from {
+		width: 50px;
+	}
+	to {
+		width: 100%;
+	}
+}
+			
+#elem16 {
+	height: 50px;
+	border: 1px solid red;
+	animation: anim 2s ease alternate infinite;
+    animation-play-state: paused;
+}
+#start:hover + #elem16 {
+	animation-play-state: running;
+}
+#start {
+	width: 50px;
+	height: 50px;
+	border: 1px solid green;
+	margin-bottom: 30px;
+}
+
+@keyframes bouncing {
+	40%, 70%, 90% {
+		animation-timing-function: ease-out;
+		bottom: 0;
+	}
+	0% {
+		bottom: 200px;
+		left: 0;
+		animation-timing-function: ease-in;
+	}
+	55% {
+		bottom: 50px;
+		animation-timing-function: ease-in;
+	}
+	80% {
+		bottom: 25px;
+		animation-timing-function: ease-in;
+	}
+	95% {
+		bottom: 10px;
+		animation-timing-function: ease-in;
+	}
+	100% {
+		left: 110px;
+		bottom: 0;
+		animation-timing-function: ease-out;
+	}
+}
+			
+#wrapper {
+	margin: left;
+	width: 220px;
+	height: 220px;
+	border: 1px solid red;
+	position: relative;
+}
+#ball {
+	background: red;
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	position: absolute;
+	animation: bouncing 5s infinite;
+}
+
+#elem18 {
+	transform: rotate(30deg);
+	border: 1px solid red;
+	width: 100px;
+	height: 50px;
+	margin: 0 auto;
+}
